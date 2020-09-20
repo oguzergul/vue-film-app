@@ -6,13 +6,16 @@ Vue.use(Vuex);
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
-  key: "todo-app",
+  key: "film-app",
 });
+import movies from "../store/movies/movies";
 
 export default new Vuex.Store({
   state: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {
+    movies,
+  },
   plugins: [vuexLocal.plugin],
 });
