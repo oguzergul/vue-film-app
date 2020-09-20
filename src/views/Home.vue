@@ -40,7 +40,6 @@ export default {
 <style scoped>
 .search{
   display: flex;
-
   &-input {
     max-width:800px ;
     margin-top:50px ;
