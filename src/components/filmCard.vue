@@ -12,9 +12,9 @@
       </div>
 
 
-      <div @click.prevent=" setFavorite(item)" class="card-button">
+      <button @click.prevent=" setFavorite(item)" class="card-button">
         <CustomText>ADD LIST</CustomText>
-      </div>
+      </button>
     </div>
   </div>
 
@@ -29,11 +29,6 @@ export default {
     dataList: {
       type: Array,
       required: true,
-    },
-  },
-  computed:{
-    buttonText() {
-      return this.isFavorite ? "ADD LIST" : "REMOVE LIST";
     },
   },
   methods: {
@@ -80,7 +75,7 @@ export default {
     width:240px;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   &-button {

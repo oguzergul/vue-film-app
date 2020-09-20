@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FilmCardCard :data-list="$store.getters.getFavorites" />
+    <FilmCard :data-list="$store.getters.getFavorites" />
   </div>
 </template>
 

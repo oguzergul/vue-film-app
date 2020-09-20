@@ -1,25 +1,18 @@
 <template>
-  <div>
-    <div class="filmcard">
-      <div>
-        <div class="filmcard-header">
-          <CustomText tag="h2">{{title}} / {{year}}</CustomText>
+    <div class="filmCard">
+        <div class="filmCard-name">
+            <CustomText tag="h2">{{title}}</CustomText>
         </div>
 
-        <div class="filmcard-body">
-          <div>
-            <img class="filmcard-body-image" :src="poster" />
-          </div>
-
-          <div>
-            <button class="filmcard-body-button">
-              <CustomText class="button-text" tag="a">Add My List</CustomText>
-            </button>
-          </div>
+        <div class="filmCard-image">
+            <img class="filmCard-image-poster" :src="poster" />
         </div>
+
+      <div class="filmCard-year">
+        <CustomText tag="h2">{{year}}</CustomText>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -44,6 +37,19 @@ export default {
       year: "",
     };
   },
+  methods: {
+    setFavorite(movieItem) {
+
+      if (this.isFavorite(movieItem.imdbID)) {
+        this.$store.commit('REMOVE_FAVORITE', movieItem);
+      } else {
+        this.$store.commit('SET_FAVORITE', movieItem);
+      }
+    },
+    isFavorite(imdbID) {
+      return this.$store.state.favorites.filter((item) => item.imdbID === imdbID)[0];
+    }
+  },
   created() {
     this.id = this.$route.params.imdbID;
     this.title = this.$route.params.Title;
@@ -55,33 +61,31 @@ export default {
 </script>
 
 <style scoped>
-.filmcard {
-  min-height: 400px;
-  margin-top: 50px;
+.filmCard {
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  width:420px;
   padding: 20px;
-  border-radius: 2px;
+  margin-top: 20px;
   background-color: rgb(var(--gray));
-  &-header {
-  }
-  &-body {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    justify-content: center;
+  &-name {
     margin-top: 20px;
-    &-image {
-      height: 250px;
-    }
-    &-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 55px;
-      width: 120px;
-      background-color: rgb(var(--yellow));
-      &-text {
-        color: rgb(var(--black));
+  }
+    &-image{
+      height: 400px;
+      width: 250px;
+      margin-top: 20px;
+      &-poster{
+        height: inherit;
+        width: inherit;
       }
     }
+  &-year{
+    margin-top: 20px;
   }
 }
 </style>
