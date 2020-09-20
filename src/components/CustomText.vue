@@ -26,8 +26,9 @@ export default {
 <style scoped>
 .normal {
   color: white;
-  margin-top: 10px;
   font-family: "Bebas Neue";
+  text-align: center;
+
 
 }
 .small {

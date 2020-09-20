@@ -1,43 +1,34 @@
 <template>
-  <nav class="navbar custom ">
+  <nav class="navbar custom">
     <Container>
+
       <router-link to="/">
-        <IconNetflix/>
+        <IconNetflix />
       </router-link>
 
-      <router-link to="/list">
-        <CustomText tag="a">Home</CustomText>
-      </router-link>
-
-      <router-link to="/list">
-        <CustomText tag="a">Movie</CustomText>
-      </router-link>
-
-      <router-link to="/detail">
-        <CustomText tag="a">Series</CustomText>
+      <router-link to="/favorites">
+        <CustomText tag="a">favorites</CustomText>
       </router-link>
 
     </Container>
   </nav>
-
 </template>
 
 <script>
-import Container from "../components/Container"
+import Container from "../components/Container";
 import CustomText from "../components/CustomText";
-import IconNetflix from "../icons/netflix.svg"
+import IconNetflix from "../icons/netflix.svg";
 export default {
-  name:"Header",
-  components: {Container,CustomText,IconNetflix}
-}
+  name: "Header",
+  components: { Container, CustomText, IconNetflix },
+};
 </script>
 
 <style scoped>
-.custom{
-  background-color:rgba(var(--black));
+.custom {
+  background-color: rgba(var(--black));
   height: 60px;
-  &-navbar{
-
+  &-navbar {
   }
 }
 </style>
