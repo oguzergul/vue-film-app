@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.5",
@@ -14,7 +15,6 @@
     "lodash": "^4.17.20",
     "popper.js": "^1.16.1",
     "postcss-nested": "^4.2.3",
-    "vee-validate": "^3.3.9",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-svg-loader": "^0.16.0",

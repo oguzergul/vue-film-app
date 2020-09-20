@@ -15,12 +15,12 @@
 
 import debounce from 'lodash/debounce';
 import { mapState } from 'vuex';
-import SearchCard from "../components/searchCard";
+
 import FilmCard from "../components/filmCard";
 
 export default {
   name:"Home",
-  components: {FilmCard, SearchCard },
+  components: {FilmCard, },
   data() {
     return {
       searchText: '',

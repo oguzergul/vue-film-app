@@ -1,4 +1,5 @@
 <template>
+
     <div class="filmCard">
         <div class="filmCard-name">
             <CustomText tag="h2">{{title}}</CustomText>
@@ -11,6 +12,9 @@
       <div class="filmCard-year">
         <CustomText tag="h2">{{year}}</CustomText>
       </div>
+
+
+
     </div>
 
 </template>

@@ -14,10 +14,14 @@ export default new Vuex.Store({
   state: {
     Movies: [],
     favorites: [],
+    isLoading: false,
   },
   mutations: {
     SET_MOVIES(state, movies) {
       state.Movies = movies;
+    },
+    SET_LOADING(state, loadingStatus) {
+      state.isLoading = loadingStatus;
     },
     SET_FAVORITE(state, movie) {
       state.favorites.push(movie);
@@ -29,9 +33,11 @@ export default new Vuex.Store({
   },
   actions: {
     searchMovie({commit}, searchText) {
+      commit('SET_LOADING', true);
       const axios = require('axios');
       axios.get('http://www.omdbapi.com/?=tt3896198&apikey=6a71067&s=' + searchText).then((response) => {
-          commit('SET_MOVIES', response.data.Search)
+        commit('SET_LOADING', false);
+        commit('SET_MOVIES', response.data.Search)
       })
     },
   },

@@ -1,4 +1,8 @@
 <template>
+  <transition
+      appear
+      enter-active-class="animate__animated animate__fadeIn animate__delay-700ms"
+  >
   <div class="row">
     <div v-for="(item, index) in dataList" :key="index" class="card">
       <div class="card-image">
@@ -17,7 +21,7 @@
       </button>
     </div>
   </div>
-
+  </transition>
 </template>
 
 <script>

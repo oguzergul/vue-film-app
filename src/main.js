@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import "bootstrap";
 
-
+import "animate.css/animate.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { extend, localize } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
