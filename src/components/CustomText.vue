@@ -27,7 +27,7 @@ export default {
 .normal {
   color: white;
   margin-top: 10px;
-  font-family: saira;
+  font-family: "Bebas Neue";
 
 }
 .small {

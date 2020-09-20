@@ -2,12 +2,21 @@
   <nav class="navbar custom ">
     <Container>
       <router-link to="/">
-        <CustomText tag="h2">VIZONTELE</CustomText>
+        <IconNetflix/>
       </router-link>
 
-      <router-link to="/login">
-          <CustomText tag="a"> Sign In</CustomText>
+      <router-link to="/list">
+        <CustomText tag="a">Home</CustomText>
       </router-link>
+
+      <router-link to="/list">
+        <CustomText tag="a">Movie</CustomText>
+      </router-link>
+
+      <router-link to="/detail">
+        <CustomText tag="a">Series</CustomText>
+      </router-link>
+
     </Container>
   </nav>
 
@@ -16,9 +25,10 @@
 <script>
 import Container from "../components/Container"
 import CustomText from "../components/CustomText";
+import IconNetflix from "../icons/netflix.svg"
 export default {
   name:"Header",
-  components: {Container,CustomText}
+  components: {Container,CustomText,IconNetflix}
 }
 </script>
 
@@ -26,5 +36,8 @@ export default {
 .custom{
   background-color:rgba(var(--black));
   height: 60px;
+  &-navbar{
+
+  }
 }
 </style>
