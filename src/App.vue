@@ -5,7 +5,6 @@
     <Container>
       <router-view/>
     </Container>
-
   </div>
 </template>
 <script>

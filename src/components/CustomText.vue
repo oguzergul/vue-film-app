@@ -14,9 +14,9 @@ export default {
     },
     size: {
       type: String,
-      default: 'normal', // normal:14, small:12, xsmall:11, xxsmall:10
+      default: 'normal',
       validator: function(value) {
-        return ['normal', 'small', 'xsmall', 'xxsmall'].indexOf(value) !== -1
+        return ['normal'].indexOf(value) !== -1
       }
     }
   }
@@ -29,15 +29,6 @@ export default {
   font-family: "Bebas Neue";
   text-align: center;
 
+}
 
-}
-.small {
-  font-size: 12px;
-}
-.xsmall {
-  font-size: 11px;
-}
-.xxsmall {
-  font-size: 10px;
-}
 </style>

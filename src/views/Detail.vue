@@ -12,11 +12,7 @@
       <div class="filmCard-year">
         <CustomText tag="h2">{{year}}</CustomText>
       </div>
-
-
-
     </div>
-
 </template>
 
 <script>
