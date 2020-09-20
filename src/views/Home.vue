@@ -1,19 +1,20 @@
-  <template>
-    <MidHeader/>
-  </template>
+<template>
+  <div>
+    <FilmCard />
+  </div>
+</template>
 
 <script>
 
-
 import FilmCard from "../components/Card/filmCard";
-import SectionCard from "../components/Card/sectionCard";
-import MidHeader from "../components/MidHeader";
+
 
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    MidHeader,
-  }
-}
+    FilmCard,
+
+  },
+};
 </script>
