@@ -11,24 +11,9 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/signup',
-    name: 'SignUp',
-    component: () => import('../views/Signup.vue'),
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('../views/Login.vue'),
-  },
-  {
-    path: '/favorites',
-    name: 'Favorites',
-    component: () => import( '../views/Favorites.vue')
-  },
-  {
-    path: '/profile',
-    name: 'Profile',
-    component: () => import( '../views/Profile.vue')
+      path: '/list',
+      name: 'List',
+      component: () => import( '../views/List.vue')
   },
   {
       path: '/detail',
