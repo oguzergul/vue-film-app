@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist'
 
 Vue.use(Vuex)
+
+const vuexLocal = new VuexPersistence({
+  storage: window.localStorage,
+  key: 'film-app'
+})
 
 export default new Vuex.Store({
 
@@ -32,5 +38,5 @@ export default new Vuex.Store({
   getters: {
     getFavorites: (state) => state.favorites,
   },
-
+  plugins: [vuexLocal.plugin]
 })
