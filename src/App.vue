@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header/>
-    <Loading v-if="$store.state.isLoading" />
     <Container>
       <router-view/>
     </Container>
